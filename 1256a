@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ld long double
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ll a,b,n,s;
+        cin>>a>>b>>n>>s;
+        int k=s/n;
+        if(k<=a)
+        {
+            int kk=s%n;
+            if(kk>b)
+            {
+                cout<<"NO"<<endl;
+            }
+            else
+            {
+                cout<<"YES"<<endl;
+            }
+        }
+        else
+        {
+            int aa=a*n;
+            int ss=s-aa;
+            if(ss>b)
+            {
+                cout<<"NO"<<endl;
+            }
+            else
+                cout<<"YES"<<endl;
+        }
+    }
+}
